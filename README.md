@@ -9,13 +9,21 @@ CREATE DATABASE agendamentoemaildb;
 USE agendamentoemaildb;
 
 CREATE TABLE agendamentoemail (
+
     id int NOT NULL AUTO_INCREMENT,
+    
     email varchar(50) NOT NULL,
+    
     assunto varchar(50) NOT NULL,
+    
     mensagem varchar(255) NOT NULL,
+    
     agendado tinytext NOT NULL,
+    
     PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    
+) 
+ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 ---------------------------------------
 
@@ -62,9 +70,13 @@ Após executar as linhas de comando acesse pelo navegador o 'localhost:8080', se
 Serão apresentadas 4 paginas para configuração:
 
 1- Selecione MySQL
+
 2- De um Nome para os atributos e para o JNDI, foi utilizado por mim " Name: AgendamentoEmailDS, JNDI Name: java:/AgendamentoEmailDS" ... estes são os nomes nas configurações do projeto em "webapp/WEB-INF/classes/META-INF/persistence.xml", se não pretende alterar utilize os mesmos nomes.
+
 3- Já esta configurado por padrão.
+
 4- Connection URL: jdbc:mysql://localhost:3306/agendamentoemaildb
+
    User Name e Password são os de seu banco de dados.
 
 --------------------------------------------------------
